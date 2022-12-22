@@ -8,11 +8,16 @@ defmodule Kanban do
 
   ## Examples
 
-      iex> Kanban.hello()
+      iex> Kanban.hello(true)
       :world
+      iex> Kanban.hello(false)
+      :sun
 
   """
-  def hello do
-    :world
+  def hello(arg) do
+    case arg do
+      true -> :world
+      false -> :sun
+    end
   end
 end

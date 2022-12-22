@@ -3,6 +3,7 @@ defmodule KanbanTest do
   doctest Kanban
 
   test "greets the world" do
-    assert Kanban.hello() == :world
+    assert Kanban.hello(true) == :world
+    assert Kanban.hello(false) == :sun
   end
 end
