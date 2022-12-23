@@ -21,5 +21,4 @@ defmodule Kanban.Process do
   #    IO.inspect({msg, from, state}, label: "CALL")
   #    {:reply, :ok, state}
   #  end
-
 end
