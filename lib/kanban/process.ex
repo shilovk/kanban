@@ -13,7 +13,7 @@ defmodule Kanban.Process do
   def init(state), do: {:ok, state}
 
   @impl GenServer
-  def handle_call({:+, value}, from, state) do
+  def handle_call({:+, value}, _from, state) do
     state = state + value
     {:reply, state, state}
   end
