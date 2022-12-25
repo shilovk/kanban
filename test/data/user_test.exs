@@ -1,4 +1,4 @@
-defmodule UserTest do
+defmodule DataUserTest do
   use ExUnit.Case
   doctest Kanban.Data.User
 

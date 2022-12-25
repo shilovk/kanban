@@ -1,6 +1,6 @@
 # Kanban
 
-**TODO: Add description**
+**Elixir homeworks of the Thinknetica webinar**
 
 ## Installation
 

@@ -4,7 +4,6 @@ defmodule TaskFSMTest do
   doctest Kanban.TaskFSM
 
   alias Kanban.Data.Task
-  alias Kanban.TaskFSM
 
   test "start_link task with idle state" do
     {:ok, pid} = Kanban.TaskFSM.start_link(%Task{state: "idle", title: "Task1"})
@@ -20,10 +19,10 @@ defmodule TaskFSMTest do
     assert "doing" == state
   end
 
-  #test "finish task" do
-  #{:ok, pid} = Kanban.TaskFSM.start_link(%Task{state: "idle", title: "Task1"})
-  #  TaskFSM.start(pid)
-  #  TaskFSM.finish(pid)
-  #  assert false == Process.alive?(pid)
-  #end
+  # test "finish task" do
+  #   {:ok, pid} = Kanban.TaskFSM.start_link(%Task{state: "idle", title: "Task1"})
+  #   TaskFSM.start(pid)
+  #   TaskFSM.finish(pid)
+  #   assert false == Process.alive?(pid)
+  # end
 end
