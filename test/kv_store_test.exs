@@ -6,12 +6,12 @@ defmodule KVStoreTest do
     {:ok, _pid} = Kanban.KVStore.start_link(%{kats: ['Tom']})
     GenServer.call(Kanban.KVStore, {:put, :kats, 'Felix'})
     values = GenServer.call(Kanban.KVStore, {:put, :dogs, 'Oliver'})
-    assert %{dogs: ['Oliver'], kats: ['Felix', 'Tom']} = values
+    assert %{dogs: ['Oliver'], kats: ['Felix', 'Tom']} == values
   end
 
   test "method get" do
     {:ok, _pid} = Kanban.KVStore.start_link(%{kats: ['Tom']})
     value = GenServer.call(Kanban.KVStore, {:get, {:kats, 0}})
-    assert 'Tom' = value
+    assert 'Tom' == value
   end
 end
