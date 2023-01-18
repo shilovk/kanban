@@ -27,3 +27,5 @@ kanban-*.tar
 
 /priv/plts/*.plt
 /priv/plts/*.plt.hash
+
+/.idea/
